@@ -20,16 +20,26 @@
       const productImage = document.getElementById("product-image");
       productImage.src = imageSource;
     </script>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" /><br />
+    <label for="employee-id">Employee ID:</label>
+    <input type="text" id="employee-id" name="employee-id" /><br />
     <label for="checkout-date">Select checkout date:</label>
-    <input type="date" id="checkout-date" name="checkout-date" />
+    <input type="date" id="checkout-date" name="checkout-date" /><br />
     <label for="return-date">Select return date:</label>
-    <input type="date" id="return-date" name="return-date" />
+    <input type="date" id="return-date" name="return-date" /><br />
 
     <!-- Add a checkout button -->
-    <button
-      onclick="window.location.href='finalize.html?return-date=' + document.getElementById('return-date').value"
-    >
-      Return
-    </button>
+    <button onclick="finalize()">Finalize</button>
+
+    <script>
+      function finalize() {
+        const returnDate = document.getElementById("return-date").value;
+        const imageSource = document.getElementById("product-image").src;
+
+        const url = `finalize.html?return-date=${returnDate}&image=${imageSource}&name=${name}`;
+        window.location.href = url;
+      }
+    </script>
   </body>
 </html>

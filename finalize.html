@@ -8,16 +8,29 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1 id="title">Thank You!</h1>
+    <h1 id="title"><a href="index.html" class="no-underline">Thank You!</a></h1>
+    <img id="product-image" src="" alt="Selected product" width="400" /><br />
+    <p>Thank you for taking the time to checkout your product</p>
     <p id="message"></p>
 
+    <button onclick="window.location.href='index.html'" class="home-button">
+      Home
+    </button>
+
     <script>
-      // Get the query parameter from the URL
+      // Get the query parameters from the URL
       const urlParams = new URLSearchParams(window.location.search);
       const returnDate = urlParams.get("return-date");
+      const imageSource = urlParams.get("image");
+
+      // Set the image source for the image element
+      const productImage = document.getElementById("product-image");
+      productImage.src = imageSource;
 
       // Create the message text node
-      const messageNode = document.createTextNode(`Return by: ${returnDate}`);
+      const messageNode = document.createTextNode(
+        `Please return by: ${returnDate}`
+      );
 
       // Append the message text node to the message element
       const messageElement = document.getElementById("message");

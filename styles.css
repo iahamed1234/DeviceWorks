@@ -53,9 +53,19 @@ table {
   label[for="return-date"] {
     font-size: 30px;
   }
-  
-  
-
+  #message {
+    font-size: 30px;
+  }
+  .home-button {
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+  label[for="name"] {
+    font-size: 30px;
+  }
+  label[for="employee-id"] {
+    font-size: 30px;
+  }
   
   
   
