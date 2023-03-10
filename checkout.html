@@ -13,6 +13,7 @@
     <script>
       // Get the query parameter from the URL
       const urlParams = new URLSearchParams(window.location.search);
+      const returnDate = urlParams.get("return-date");
       const imageSource = urlParams.get("image");
 
       // Set the image source for the image element
@@ -23,5 +24,12 @@
     <input type="date" id="checkout-date" name="checkout-date" />
     <label for="return-date">Select return date:</label>
     <input type="date" id="return-date" name="return-date" />
+
+    <!-- Add a checkout button -->
+    <button
+      onclick="window.location.href='finalize.html?return-date=' + document.getElementById('return-date').value"
+    >
+      Return
+    </button>
   </body>
 </html>

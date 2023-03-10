@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finalize</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Thank You!</h1>
+    <p id="message"></p>
+
+    <script>
+      // Get the query parameter from the URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const returnDate = urlParams.get("return-date");
+
+      // Create the message text node
+      const messageNode = document.createTextNode(`Return by: ${returnDate}`);
+
+      // Append the message text node to the message element
+      const messageElement = document.getElementById("message");
+      messageElement.appendChild(messageNode);
+    </script>
+  </body>
+</html>
