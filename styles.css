@@ -1,5 +1,6 @@
 #title {
     text-align: center;
+    text-decoration: none;
   }
 #instructions {
     font-size: 1.2em;
@@ -31,5 +32,30 @@ table {
     font-size: 1.2em;
     padding: 10px 20px;
   }
+  .no-underline {
+    text-decoration: none;
+    color: black;
+  }
+  input[type="date"] {
+    width: 300px;
+    height: 100px;
+  }
+  #checkout-date {
+    font-size: 30px;
+    width: 200px;
+  }
+  label[for="checkout-date"] {
+    font-size: 30px;
+  }
+  #return-date {
+    font-size: 30px;
+  }
+  label[for="return-date"] {
+    font-size: 30px;
+  }
+  
+  
+
+  
   
   
