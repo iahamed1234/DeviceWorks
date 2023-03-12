@@ -8,18 +8,11 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1 id="title"><a href="index.html" class="no-underline">Checkout</a></h1>
+    <h1 id="followtitle">
+      <a href="index.html" class="no-underline">Checkout</a>
+    </h1>
     <img id="product-image" src="" alt="Selected product" width="400" /><br />
-    <script>
-      // Get the query parameter from the URL
-      const urlParams = new URLSearchParams(window.location.search);
-      const returnDate = urlParams.get("return-date");
-      const imageSource = urlParams.get("image");
-
-      // Set the image source for the image element
-      const productImage = document.getElementById("product-image");
-      productImage.src = imageSource;
-    </script>
+    
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" /><br />
     <label for="employee-id">Employee ID:</label>
@@ -32,14 +25,6 @@
     <!-- Add a checkout button -->
     <button onclick="finalize()">Finalize</button>
 
-    <script>
-      function finalize() {
-        const returnDate = document.getElementById("return-date").value;
-        const imageSource = document.getElementById("product-image").src;
-
-        const url = `finalize.html?return-date=${returnDate}&image=${imageSource}&name=${name}`;
-        window.location.href = url;
-      }
-    </script>
+    <script src="checkout.js"></script>
   </body>
 </html>
