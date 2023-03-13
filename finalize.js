@@ -13,3 +13,20 @@ const messageNode = document.createTextNode(`Please return by: ${returnDate}`);
 // Append the message text node to the message element
 const messageElement = document.getElementById("message");
 messageElement.appendChild(messageNode);
+
+// testing
+// Set up test URL with query parameter
+const testURL = "http://example.com?return-date=2023-03-19";
+
+// Create URLSearchParams object
+const urlParamsTest = new URLSearchParams(new URL(testURL).search);
+
+// Retrieve returnDate from URL parameters
+const returnDateTest = urlParams.get("return-date");
+
+// Check if returnDate matches expected value
+if (returnDateTest === "2023-03-19") {
+  console.log("Test passed!");
+} else {
+  console.error("Test failed - returnDate does not match expected value");
+}
